@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>login.png</file>
+        <file>logout.png</file>
+        <file>help.png</file>
+        <file>regester.png</file>
+        <file>recharge.png</file>
+        <file>record.png</file>
+        <file>pay.png</file>
+        <file>cast.png</file>
+        <file>connect.png</file>
+        <file>disconnect.png</file>
+        <file>record2.png</file>
+        <file>changePwd.png</file>
+    </qresource>
+</RCC>

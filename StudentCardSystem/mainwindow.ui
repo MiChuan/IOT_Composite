@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>780</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>连接管理</string>
+    </property>
+    <addaction name="action_connect"/>
+    <addaction name="action_disconnect"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>电子钱包</string>
+    </property>
+    <addaction name="action_register"/>
+    <addaction name="action_recharge"/>
+    <addaction name="action_consume"/>
+    <addaction name="action_consume_log"/>
+    <addaction name="action_balance"/>
+    <addaction name="action_writeoff"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>信息分析</string>
+    </property>
+    <addaction name="action_record"/>
+    <addaction name="action_analyze"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_about"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_connect">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/prefix1/connect.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>连接</string>
+   </property>
+   <property name="statusTip">
+    <string>连接读卡器模块</string>
+   </property>
+  </action>
+  <action name="action_disconnect">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/prefix1/disconnect.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>断开</string>
+   </property>
+   <property name="statusTip">
+    <string>断开读卡器</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/prefix1/help.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+   <property name="statusTip">
+    <string>关于本软件的信息</string>
+   </property>
+  </action>
+  <action name="action_register">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/prefix1/regester.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>发卡</string>
+   </property>
+  </action>
+  <action name="action_recharge">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/prefix1/recharge.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>充值</string>
+   </property>
+  </action>
+  <action name="action_consume">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/prefix1/pay.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>消费</string>
+   </property>
+  </action>
+  <action name="action_consume_log">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/prefix1/record.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>流水</string>
+   </property>
+  </action>
+  <action name="action_balance">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/prefix1/cast.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>余额</string>
+   </property>
+  </action>
+  <action name="action_writeoff">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/prefix1/logout.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>销卡</string>
+   </property>
+  </action>
+  <action name="action_record">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/prefix1/record2.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>进出登记</string>
+   </property>
+  </action>
+  <action name="action_analyze">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/prefix1/changePwd.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>总体分析</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
