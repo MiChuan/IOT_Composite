@@ -29,14 +29,38 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     tools/tools.cpp \
-    serialThread/serialportthread.cpp
+    serialThread/serialportthread.cpp \
+    database/dbmanager.cpp \
+    database/persontablemodel.cpp \
+    database/rechargetablemodel.cpp \
+    database/recordtablemodel.cpp \
+    database/registertablemodel.cpp \
+    database/writeofftablemodel.cpp \
+    serialThread/serialportthread.cpp \
+    tools/tools.cpp \
+    main.cpp \
+    mainwindow.cpp \
+    database/user_tablemodel.cpp
 
 HEADERS += \
         mainwindow.h \
     tools/tools.h \
     inc/m1356dll.h \
     inc/m1356dll_global.h \
-    serialThread/serialportthread.h
+    serialThread/serialportthread.h \
+    database/database_api.h \
+    database/dbmanager.h \
+    database/persontablemodel.h \
+    database/rechargetablemodel.h \
+    database/recordtablemodel.h \
+    database/registertablemodel.h \
+    database/writeofftablemodel.h \
+    inc/m1356dll.h \
+    inc/m1356dll_global.h \
+    serialThread/serialportthread.h \
+    tools/tools.h \
+    mainwindow.h \
+    database/user_tablemodel.h
 
 FORMS += \
         mainwindow.ui
@@ -45,3 +69,9 @@ RESOURCES += \
     resource/res.qrc
 
 DISTFILES +=
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/lib/ -lM1356Dll
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/lib/ -lM1356Dlld
+
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.
