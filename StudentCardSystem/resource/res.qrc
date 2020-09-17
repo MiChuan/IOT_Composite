@@ -12,5 +12,6 @@
         <file>disconnect.png</file>
         <file>record2.png</file>
         <file>changePwd.png</file>
+        <file>studentcard.png</file>
     </qresource>
 </RCC>

@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resource/res.qrc">
+    <normaloff>:/new/prefix1/studentcard.png</normaloff>:/new/prefix1/studentcard.png</iconset>
+  </property>
   <widget class="QWidget" name="centralWidget"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -108,6 +112,9 @@
    <property name="text">
     <string>发卡</string>
    </property>
+   <property name="statusTip">
+    <string>激活和初始化卡片</string>
+   </property>
   </action>
   <action name="action_recharge">
    <property name="icon">
@@ -117,6 +124,9 @@
    </property>
    <property name="text">
     <string>充值</string>
+   </property>
+   <property name="statusTip">
+    <string>充值和查看充值记录</string>
    </property>
   </action>
   <action name="action_consume">
@@ -128,6 +138,9 @@
    <property name="text">
     <string>消费</string>
    </property>
+   <property name="statusTip">
+    <string>消费模拟</string>
+   </property>
   </action>
   <action name="action_consume_log">
    <property name="icon">
@@ -137,6 +150,9 @@
    </property>
    <property name="text">
     <string>流水</string>
+   </property>
+   <property name="statusTip">
+    <string>查看消费流水</string>
    </property>
   </action>
   <action name="action_balance">
@@ -148,6 +164,9 @@
    <property name="text">
     <string>余额</string>
    </property>
+   <property name="statusTip">
+    <string>查询余额</string>
+   </property>
   </action>
   <action name="action_writeoff">
    <property name="icon">
@@ -157,6 +176,9 @@
    </property>
    <property name="text">
     <string>销卡</string>
+   </property>
+   <property name="statusTip">
+    <string>挂失和注销卡</string>
    </property>
   </action>
   <action name="action_record">
@@ -168,6 +190,9 @@
    <property name="text">
     <string>进出登记</string>
    </property>
+   <property name="statusTip">
+    <string>登记进出宿舍、图书馆、学校记录</string>
+   </property>
   </action>
   <action name="action_analyze">
    <property name="icon">
@@ -178,9 +203,14 @@
    <property name="text">
     <string>总体分析</string>
    </property>
+   <property name="statusTip">
+    <string>分析学生作息、学习、生活</string>
+   </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resource/res.qrc"/>
+ </resources>
  <connections/>
 </ui>

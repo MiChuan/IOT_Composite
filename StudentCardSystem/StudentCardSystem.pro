@@ -4,7 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui \
+        sql \
+        serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,13 +27,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    tools/tools.cpp \
+    serialThread/serialportthread.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    tools/tools.h \
+    inc/m1356dll.h \
+    inc/m1356dll_global.h \
+    serialThread/serialportthread.h
 
 FORMS += \
         mainwindow.ui
 
 RESOURCES += \
     resource/res.qrc
+
+DISTFILES +=
