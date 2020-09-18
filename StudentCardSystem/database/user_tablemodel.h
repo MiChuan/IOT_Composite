@@ -26,9 +26,14 @@ public:
     void createTable();//创建表
     void bindTable(void);//绑定表
     int findRecordById(const QString userId);//根据用户Id查询记录
-    QSqlRecord findRecordByName(const QString userName);//根据用户名查询记录
+    bool isActivated(const QString userId);//查询指定Id卡是否激活
+    int activate(const QString userId);//激活未激活的卡
+    int suspend(const QString userId);//挂失卡
+    int balance(const QString userId);//查询余额
+    int nopwdMoney(const QString userId);//查询免密金额
+    bool checkPwd(const QString userId, QString pwd);//校验消费密码
     //插入记录
-    bool insertRecords(QString userId,QString userName,QString telephone,QString activation,QString balance,QString password,QString money);
+    bool insertRecords(QString userId,QString userName,QString telephone,QString balance,QString password,QString money);
     //删除记录
     bool deleteRecords(int row);
 };

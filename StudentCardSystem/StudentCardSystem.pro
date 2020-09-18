@@ -31,7 +31,6 @@ SOURCES += \
     tools/tools.cpp \
     serialThread/serialportthread.cpp \
     database/dbmanager.cpp \
-    database/persontablemodel.cpp \
     database/rechargetablemodel.cpp \
     database/recordtablemodel.cpp \
     database/registertablemodel.cpp \
@@ -50,7 +49,6 @@ HEADERS += \
     serialThread/serialportthread.h \
     database/database_api.h \
     database/dbmanager.h \
-    database/persontablemodel.h \
     database/rechargetablemodel.h \
     database/recordtablemodel.h \
     database/registertablemodel.h \
