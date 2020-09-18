@@ -11,10 +11,10 @@
 #include "database_api.h"
 #include "user_tablemodel.h"
 
-#include "persontablemodel.h"
+
 #include "recordtablemodel.h"
 #include "writeofftablemodel.h"
-#include "registertablemodel.h"
+
 #include "rechargetablemodel.h"
 /**************************************
  *作者: jianghj@up-tech.com

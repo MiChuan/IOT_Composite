@@ -32,14 +32,13 @@ SOURCES += \
     serialThread/serialportthread.cpp \
     database/dbmanager.cpp \
     database/rechargetablemodel.cpp \
-    database/recordtablemodel.cpp \
-    database/registertablemodel.cpp \
     database/writeofftablemodel.cpp \
     serialThread/serialportthread.cpp \
     tools/tools.cpp \
     main.cpp \
     mainwindow.cpp \
-    database/user_tablemodel.cpp
+    database/user_tablemodel.cpp \
+    database/consume_tablemodel.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -50,15 +49,14 @@ HEADERS += \
     database/database_api.h \
     database/dbmanager.h \
     database/rechargetablemodel.h \
-    database/recordtablemodel.h \
-    database/registertablemodel.h \
     database/writeofftablemodel.h \
     inc/m1356dll.h \
     inc/m1356dll_global.h \
     serialThread/serialportthread.h \
     tools/tools.h \
     mainwindow.h \
-    database/user_tablemodel.h
+    database/user_tablemodel.h \
+    database/consume_tablemodel.h
 
 FORMS += \
         mainwindow.ui

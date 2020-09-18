@@ -13,7 +13,7 @@ DBManager::DBManager(QObject *parent) : QObject(parent)
             User_TableModel u;
             u.createTable();
         }
-        if(!this->tableExist(TABLE_NAME_RECORD))
+        if(!this->tableExist(TABLE_NAME_CONSUME))
         {
             RecordTableModel r;
             r.createTable();
