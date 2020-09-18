@@ -8,14 +8,12 @@
 #include <QtSql/QSqlQuery>
 #include <QtSql/QSqlError>
 #include <QDebug>
+#include "consume_tablemodel.h"
 #include "database_api.h"
-#include "user_tablemodel.h"
-
-
-#include "recordtablemodel.h"
-#include "writeofftablemodel.h"
-
+#include "merchant_tablemodel.h"
+#include "product_tablemodel.h"
 #include "rechargetablemodel.h"
+#include "user_tablemodel.h"
 /**************************************
  *作者: jianghj@up-tech.com
  *日期: 2016-09-20

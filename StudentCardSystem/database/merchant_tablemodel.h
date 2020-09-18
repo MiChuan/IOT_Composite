@@ -1,5 +1,6 @@
-#ifndef RECHARGETABLEMODEL_H
-#define RECHARGETABLEMODEL_H
+#ifndef MERCHANT_TABLEMODEL_H
+#define MERCHANT_TABLEMODEL_H
+
 #include <QtSql/QSqlTableModel>
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlRecord>
@@ -11,9 +12,9 @@
 /**************************************
  *作者: huhan_h@163.com
  *日期: 2020-09-20
- *描述: 充值记录表的model
+ *描述: 商户信息表的model
 ***************************************/
-class RechargeTableModel : public QSqlTableModel
+class Merchant_TableModel : public QSqlTableModel
 {
     Q_OBJECT
 private:
@@ -22,22 +23,20 @@ private:
     QStringList header;//表头
 
 public:
-
-    explicit RechargeTableModel(QObject *parent = 0);
+    explicit Merchant_TableModel(QObject *parent = 0);
 
     void createTable();//创建表
 
     void bindTable(void);//绑定表
 
-    //根据卡号查找记录,返回该记录
-    QSqlRecord findRecord(const QString &tagId);
+    //根据商户编号查找记录,返回该记录
+    QSqlRecord findRecord(const QString &merchantId);
 
-    //根据tagId删除记录
-    bool deleteByTagId(const QString &tagId);
+    //根据merchantId删除记录
+    bool deleteByProductId(const QString &merchantId);
 
     //添加记录
-    int addRecord(QString tagId, QString rechargeMoney, QString time,
-                  QString addr, QString current_value);
+    int addRecord(QString &merchantId,QString &name);
 };
 
-#endif // RECHARGETABLEMODEL_H
+#endif // MERCHANT_TABLEMODEL_H

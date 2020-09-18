@@ -5,7 +5,7 @@
 /**************************************
  *作者: huhan_h@163.com
  *日期: 2020-09-20
- *描述: 用户信息表的model
+ *描述: 消费记录表的model
 ***************************************/
 Consume_TableModel::Consume_TableModel(QObject *parent) : QSqlTableModel(parent)
 {
@@ -64,7 +64,7 @@ void Consume_TableModel::bindTable()
  */
 QSqlRecord Consume_TableModel::findRecord(const QString &tagId)
 {
-    setFilter(QObject::tr("卡号= '%1'").arg(tagId)); //根据姓名进行筛选
+    setFilter(QObject::tr("卡号= '%1'").arg(tagId)); //根据卡号进行筛选
     select();
     return record();
 }

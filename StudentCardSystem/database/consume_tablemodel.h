@@ -9,7 +9,11 @@
 #include <QSqlField>
 #include <QString>
 #include <QDebug>
-
+/**************************************
+ *作者: huhan_h@163.com
+ *日期: 2020-09-20
+ *描述: 消费记录表的model
+***************************************/
 class Consume_TableModel : public QSqlTableModel
 {
     Q_OBJECT
