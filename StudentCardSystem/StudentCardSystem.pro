@@ -40,7 +40,9 @@ SOURCES += \
     database/consume_tablemodel.cpp \
     database/product_tablemodel.cpp \
     database/merchant_tablemodel.cpp \
-    database/dormitory_tablemodel.cpp
+    database/dormitory_tablemodel.cpp \
+    database/libary_tablemodel.cpp \
+    database/school_tablemodel.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -60,7 +62,9 @@ HEADERS += \
     database/consume_tablemodel.h \
     database/product_tablemodel.h \
     database/merchant_tablemodel.h \
-    database/dormitory_tablemodel.h
+    database/dormitory_tablemodel.h \
+    database/libary_tablemodel.h \
+    database/school_tablemodel.h
 
 FORMS += \
         mainwindow.ui

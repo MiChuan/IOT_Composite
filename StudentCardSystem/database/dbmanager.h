@@ -10,9 +10,12 @@
 #include <QDebug>
 #include "consume_tablemodel.h"
 #include "database_api.h"
+#include "dormitory_tablemodel.h"
+#include "libary_tablemodel.h"
 #include "merchant_tablemodel.h"
 #include "product_tablemodel.h"
 #include "rechargetablemodel.h"
+#include "school_tablemodel.h"
 #include "user_tablemodel.h"
 /**************************************
  *作者: jianghj@up-tech.com

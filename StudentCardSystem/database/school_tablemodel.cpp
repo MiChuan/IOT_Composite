@@ -1,14 +1,14 @@
-#include "dormitory_tablemodel.h"
+#include "school_tablemodel.h"
 #include "database/database_api.h"
 /**************************************
  *作者: huhan_h@163.com
  *日期: 2020-09-20
- *描述: 进出宿舍记录表的model
+ *描述: 进出学校记录表的model
 ***************************************/
 
-Dormitory_TableModel::Dormitory_TableModel(QObject *parent) : QSqlTableModel(parent)
+School_TableModel::School_TableModel(QObject *parent) : QSqlTableModel(parent)
 {
-    tableName = TABLE_NAME_DORREG;
+    tableName = TABLE_NAME_SCHREG;
     header<<QObject::trUtf8("卡号")<<
             QObject::trUtf8("姓名")<<
             QObject::trUtf8("时间")<<
@@ -17,11 +17,11 @@ Dormitory_TableModel::Dormitory_TableModel(QObject *parent) : QSqlTableModel(par
 }
 
 /**
- * @brief Dormitory_TableModel::createTable
+ * @brief School_TableModel::createTable
  * @param tableName 数据块表名称
- * 用于创建进出宿舍记录表
+ * 用于创建进出学校记录表
  */
-void Dormitory_TableModel::createTable()
+void School_TableModel::createTable()
 {
     QSqlQuery query;
     QString str;
@@ -43,22 +43,22 @@ void Dormitory_TableModel::createTable()
 }
 
 /**
- * @brief Dormitory_TableModel::restore
+ * @brief School_TableModel::restore
  * 绑定表名
  */
-void Dormitory_TableModel::bindTable()
+void School_TableModel::bindTable()
 {
     setTable(tableName);
     select();
 }
 
 /**
- * @brief Dormitory_TableModel::findRecord
+ * @brief School_TableModel::findRecord
  * @param tagId 卡号
  * @return QSqlRecord型记录集
  * 根据卡号查找记录
  */
-QSqlRecord Dormitory_TableModel::findRecord(const QString &tagId)
+QSqlRecord School_TableModel::findRecord(const QString &tagId)
 {
     for(int row=0; row<rowCount(); row++){
         if(data(index(row, 0)).toString() == tagId)
@@ -68,12 +68,12 @@ QSqlRecord Dormitory_TableModel::findRecord(const QString &tagId)
 }
 
 /**
- * @brief Dormitory_TableModel::findNewRecord
+ * @brief School_TableModel::findNewRecord
  * @param tagId 卡号
  * @return 记录索引
  * 根据卡号查找最新记录
  */
-int Dormitory_TableModel::findNewRecord(const QString &tagId)
+int School_TableModel::findNewRecord(const QString &tagId)
 {
     int count = rowCount();
     for(int row=count-1; 0 <= row; row--){//从表尾开始查找
@@ -84,12 +84,12 @@ int Dormitory_TableModel::findNewRecord(const QString &tagId)
 }
 
 /**
- * @brief Dormitory_TableModel::deleteByTagId
+ * @brief School_TableModel::deleteByTagId
  * @param tagId 卡号
  * @return 如果成功返回true，否则false
  * 根据卡号删除记录
  */
-bool Dormitory_TableModel::deleteByTagId(const QString &tagId)
+bool School_TableModel::deleteByTagId(const QString &tagId)
 {
     for(int row=0; row<rowCount(); row++){
         if(data(index(row, 0)).toString() == tagId)
@@ -99,7 +99,7 @@ bool Dormitory_TableModel::deleteByTagId(const QString &tagId)
 }
 
 /**
- * @brief RechargeTableModel::addRecord
+ * @brief School_TableModel::addRecord
  * @param tagId 卡号
  * @param name 姓名
  * @param time 时间
@@ -108,7 +108,7 @@ bool Dormitory_TableModel::deleteByTagId(const QString &tagId)
  * @return 记录条数
  * 添加记录
  */
-int Dormitory_TableModel::addRecord(QString tagId, QString name, QString time, QString status, QString duration)
+int School_TableModel::addRecord(QString tagId, QString name, QString time, QString status, QString duration)
 {
     QSqlRecord record;//也可以直接使用sql语句进行,但是sql语句更容易写错
     record.append(QSqlField(header.at(0), QVariant::String));

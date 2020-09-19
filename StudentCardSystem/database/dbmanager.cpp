@@ -8,35 +8,45 @@ DBManager::DBManager(QObject *parent) : QObject(parent)
 {
     if(this->createDB(DATABASE_NAME))
     {
-        if(!this->tableExist(TABLE_NAME_USERINFO))
-        {
-            User_TableModel u;
-            u.createTable();
-        }
         if(!this->tableExist(TABLE_NAME_CONSUME))
-        {
-            RecordTableModel r;
-            r.createTable();
+        {//消费记录表
+            Consume_TableModel c;
+            c.createTable();
         }
-        if(!this->tableExist(TABLE_NAME_REGISTER))
-        {
-            RegisterTableModel r;
-            r.createTable();
+        if(!this->tableExist(TABLE_NAME_DORREG))
+        {//进出宿舍记录表
+            Dormitory_TableModel d;
+            d.createTable();
         }
-        if(!this->tableExist(TABLE_NAME_WRITEOFF))
-        {
-            WriteOffTableModel w;
-            w.createTable();
+        if(!this->tableExist(TABLE_NAME_LIBREG))
+        {//进出图书馆记录表
+            Libary_TableModel l;
+            l.createTable();
         }
-        if(!this->tableExist(TABLE_NAME_ADMIN))
-        {
-            AdminTableModel a;
-            a.createTable();
+        if(!this->tableExist(TABLE_NAME_MERINFO))
+        {//商户信息表
+            Merchant_TableModel m;
+            m.createTable();
+        }
+        if(!this->tableExist(TABLE_NAME_PRODINFO))
+        {//商品信息表
+            Product_TableModel p;
+            p.createTable();
         }
         if(!this->tableExist(TABLE_NAME_RECHARGE))
-        {
+        {//充值记录表
             RechargeTableModel r;
             r.createTable();
+        }
+        if(!this->tableExist(TABLE_NAME_SCHREG))
+        {//进出学校记录表
+            School_TableModel s;
+            s.createTable();
+        }
+        if(!this->tableExist(TABLE_NAME_USERINFO))
+        {//用户信息表
+            User_TableModel u;
+            u.createTable();
         }
     }
 }

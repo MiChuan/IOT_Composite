@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QCloseEvent>
-//#include "database/database_api.h"
+#include "database/database_api.h"
 //#include "pages/pages.h"
 #include "serialThread/serialportthread.h"
 #include "inc/m1356dll.h"
