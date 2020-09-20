@@ -42,7 +42,8 @@ SOURCES += \
     database/merchant_tablemodel.cpp \
     database/dormitory_tablemodel.cpp \
     database/libary_tablemodel.cpp \
-    database/school_tablemodel.cpp
+    database/school_tablemodel.cpp \
+    pages/connect/settingsdialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -64,10 +65,13 @@ HEADERS += \
     database/merchant_tablemodel.h \
     database/dormitory_tablemodel.h \
     database/libary_tablemodel.h \
-    database/school_tablemodel.h
+    database/school_tablemodel.h \
+    pages/connect/settingsdialog.h \
+    pages/pages.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    pages/connect/settingsdialog.ui
 
 RESOURCES += \
     resource/res.qrc
